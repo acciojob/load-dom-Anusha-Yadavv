@@ -1,7 +1,14 @@
 //your JS code here. If required.
- window.addEventListener('DOMContentLoaded', function() {
-            // let pElement = document.createElement('p');
-	 let bodyElement=document.getEelementsByTagName('body')
-           bodyElement.innerText = 'DOM load success';
-            document.body.appendChild(pElement);
-        });
+ document.addEventListener('DOMContentLoaded', function () {
+        // Get the body element
+        var body = document.body;
+
+        // Check if the body is empty
+        if (body.childNodes.length === 0) {
+            // Create a text node with the message
+            var textNode = document.createTextNode('DOM load success');
+
+            // Append the text node to the body
+            body.appendChild(textNode);
+        }
+    });
